@@ -5,6 +5,9 @@ Simple Error-Correction Code scripts in R:
 - Reed-Solomon
 - BCH
 
+### Hamming demo
+
+<https://bquast.github.io/error-correction-codes/hamming>
 
 
 ## References
