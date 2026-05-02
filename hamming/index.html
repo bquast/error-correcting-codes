@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamming (7,4) Code Demo</title>
-    <!-- Loading Genesis typography -->
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -23,28 +22,26 @@
             
             <div class="section-divider">
                 <h3>1. Encode Message</h3>
-                <p class="text-secondary">Enter a 4-bit message (0s and 1s) to encode into a 7-bit Hamming code.</p>
-                <div class="input-group">
-                    <label for="msgInput">4-Bit Message:</label>
-                    <input type="text" id="msgInput" maxlength="4" pattern="[01]{4}" value="1011">
+                <p class="text-secondary">Enter a 4-bit message (0s and 1s) to encode.</p>
+                <div class="action-row">
+                    <input type="text" id="msgInput" maxlength="4" pattern="[01]{4}" value="1011" aria-label="4-Bit Message">
+                    <button id="btnEncode" class="btn btn-primary">Encode</button>
                 </div>
-                <button id="btnEncode" class="btn btn-primary">Generate Hamming Code</button>
             </div>
 
             <div class="section-divider disabled-overlay" id="errorStep">
                 <h3>2. Simulate Transmission Error</h3>
-                <p class="text-secondary">Flip a specific bit to simulate noise during transmission.</p>
-                <div class="input-group">
-                    <label for="errorPos">Bit to flip (1-7, 0 for no error):</label>
-                    <input type="number" id="errorPos" min="0" max="7" value="5">
+                <p class="text-secondary">Flip a specific bit (1-7, 0 for no error).</p>
+                <div class="action-row">
+                    <input type="number" id="errorPos" min="0" max="7" value="5" aria-label="Bit to flip">
+                    <button id="btnTransmit" class="btn btn-secondary">Transmit</button>
                 </div>
-                <button id="btnTransmit" class="btn btn-secondary">Transmit with Error</button>
             </div>
 
             <div class="section-divider disabled-overlay" id="decodeStep">
                 <h3>3. Detect & Correct</h3>
-                <p class="text-secondary">Calculate syndromes to find the error position, correct it, and extract original bits.</p>
-                <button id="btnDecode" class="btn btn-primary">Analyze & Correct</button>
+                <p class="text-secondary">Calculate syndromes to find and fix errors.</p>
+                <button id="btnDecode" class="btn btn-primary w-full">Analyze & Correct</button>
             </div>
         </section>
 
