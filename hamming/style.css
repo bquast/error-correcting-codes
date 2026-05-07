@@ -21,7 +21,7 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
-    font-size: 13px; /* Smaller base font */
+    font-size: 13px;
 }
 
 h1, h2, h3 {
@@ -31,7 +31,6 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* Highly compressed headers */
 h1 { font-size: 28px; }
 h2 { font-size: 18px; margin-bottom: 12px; }
 h3 { font-size: 15px; margin-bottom: 2px; }
@@ -49,7 +48,7 @@ header { margin-bottom: 20px; }
 
 .grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Give log slightly more room */
+    grid-template-columns: 1fr 1.3fr; /* Slightly more room for math in log */
     gap: 20px;
     align-items: start;
 }
@@ -125,34 +124,27 @@ input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 2px
 .log-title { font-family: var(--font-display); font-weight: 700; color: var(--primary); margin-bottom: 4px; font-size: 14px; }
 .log-data { color: var(--text-secondary); line-height: 1.4; }
 
-/* Bit Chips Compressed */
-.bits-display {
-    display: flex;
-    gap: 4px;
+/* Calculation Box (Educational) */
+.calc-box {
+    background: rgba(0,0,0,0.03);
+    border-left: 2px solid var(--border);
+    padding: 6px 10px;
     margin: 6px 0;
-    flex-wrap: wrap;
-}
-
-.bit-chip {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    background: #E8E8EC;
+    font-size: 11px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 12px;
     color: var(--text-primary);
-    border-radius: 4px;
-    padding: 4px 8px;
-    font-weight: 700;
-    font-size: 14px;
-    min-width: 16px;
 }
 
-.bit-label {
-    font-size: 9px;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-top: 2px;
+/* Bit Chips */
+.bits-display { display: flex; gap: 4px; margin: 6px 0; flex-wrap: wrap; }
+.bit-chip {
+    display: inline-flex; flex-direction: column; align-items: center;
+    background: #E8E8EC; color: var(--text-primary);
+    border-radius: 4px; padding: 4px 8px; font-weight: 700; font-size: 14px; min-width: 16px;
 }
-
+.bit-label { font-size: 9px; color: var(--text-secondary); font-weight: 400; margin-top: 2px; }
 .bit-parity { background-color: rgba(99,102,241,0.1); color: var(--primary); }
 .bit-error { background-color: rgba(239,68,68,0.1); color: var(--error); border: 1px solid var(--error); }
 .bit-corrected { background-color: rgba(16,185,129,0.1); color: var(--success); border: 1px solid var(--success); }
