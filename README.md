@@ -1,14 +1,18 @@
-# error-correction-codes
+# error-correcting-codes
 
-Simple Error-Correction Code scripts in R:
-- Hamming
-- Reed-Solomon
-- BCH
+Landing page: <https://bquast.github.io/error-correction-codes>
 
-### Hamming demo
+### Hamming web demo
+
 
 <https://bquast.github.io/error-correction-codes/hamming>
 
+### R scripts
+
+Simple Error-Correcting Codes scripts in R:
+- Hamming
+- Reed-Solomon
+- BCH
 
 ## References
 
