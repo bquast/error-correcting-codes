@@ -1,11 +1,11 @@
 # error-correcting-codes
 
-Landing page: <https://bquast.github.io/error-correction-codes>
+Landing page: <https://bquast.github.io/error-correcting-codes>
 
 ### Hamming web demo
 
 
-<https://bquast.github.io/error-correction-codes/hamming>
+<https://bquast.github.io/error-correcting-codes/hamming>
 
 ### R scripts
 
